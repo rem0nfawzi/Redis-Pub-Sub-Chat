@@ -11,10 +11,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/status", (request, response) =>
-  response.json({ clients: clients.length })
-);
-
 // Event listener
 async function eventsHandler(request, response) {
   try {
